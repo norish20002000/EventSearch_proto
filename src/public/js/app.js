@@ -1854,8 +1854,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "ExampleComponent",
+  props: {
+    eventData: ""
+  },
+  data: function data() {
+    return {
+      events: this.eventData
+    };
+  },
   mounted: function mounted() {
+    // console.log("eventId : " + this.eventData[2].id)
     console.log('Component mounted.');
   }
 });
@@ -37254,32 +37265,33 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-8" },
+        _vm._l(_vm.events, function(event) {
+          return _c("div", { key: event.id, staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
-              _vm._v("Example Component")
+              _vm._v(_vm._s(event.summary))
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
+              _c("div", [_vm._v(_vm._s(event.id))]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(event.title))]),
               _vm._v(
                 "\n                    I'm an example component.\n                "
               )
             ])
           ])
-        ])
-      ])
+        }),
+        0
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 

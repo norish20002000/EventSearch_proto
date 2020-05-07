@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class WelcomeController extends Controller
 {
     public function index(Request $request)
     {
-        $data['testdata'] = "testtest";
+        $data['event_data'] = Event::where('status', 0)->get();
 
         return view("welcome", $data);
     }
