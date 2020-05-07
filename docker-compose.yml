@@ -45,7 +45,9 @@ services:
       - MYSQL_PASSWORD=${DB_PASS}
       - MYSQL_ROOT_PASSWORD=${DB_PASS}
       - TZ=${TZ}
-
+    ports :
+      - ${DB_PORT}:3306
+  
   node:
     image: node
     tty: true
