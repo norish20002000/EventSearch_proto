@@ -1855,6 +1855,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ExampleComponent",
   props: {
@@ -37280,6 +37283,8 @@ var render = function() {
               _c("div", [_vm._v(_vm._s(event.id))]),
               _vm._v(" "),
               _c("div", [_vm._v(_vm._s(event.title))]),
+              _vm._v(" "),
+              _c("div", [_c("img", { attrs: { src: event.thumb_url } })]),
               _vm._v(
                 "\n                    I'm an example component.\n                "
               )

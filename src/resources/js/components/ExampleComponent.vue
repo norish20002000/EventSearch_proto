@@ -7,6 +7,9 @@
                     <div class="card-body">
                         <div>{{event.id}}</div>
                         <div>{{event.title}}</div>
+                        <div>
+                            <img :src="event.thumb_url"/>
+                        </div>
                         I'm an example component.
                     </div>
                 </div>
