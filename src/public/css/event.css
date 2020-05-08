@@ -2,3 +2,36 @@
     float: left;
 }
 
+.formsearch {
+    /* position: relative; */
+}
+  
+.formsearch-input {
+    box-sizing: border-box;
+    height: 30px;
+    padding: 0 10px 0 34px;
+    margin: 5px 0;
+    font-size: 1em;
+    color: #333;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    outline: 0;
+    transition: 0.3s;
+    -webkit-appearance: none;
+}
+
+.formsearch-input:focus {
+    border: 1px solid #00b5ad;
+}
+
+.formsearch-button {
+    top: 0;
+    left: 2px;
+    box-sizing: content-box;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: inherit;
+    border: solid 1px #ccc;
+    opacity: 0.54;
+}
