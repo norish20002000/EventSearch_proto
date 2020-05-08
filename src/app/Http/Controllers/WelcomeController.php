@@ -7,9 +7,15 @@ use App\Models\Event;
 
 class WelcomeController extends Controller
 {
+    /**
+     * top画面表示
+     * @param Request $request
+     * @return view
+     */
     public function index(Request $request)
     {
-        $data['event_data'] = Event::where('status', 0)->get();
+        $data['event_data'] = Event::getEventData($request);
+        $data['search'] = $request->search;
 
         return view("welcome", $data);
     }

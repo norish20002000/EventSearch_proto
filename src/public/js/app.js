@@ -1858,6 +1858,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ExampleComponent",
   props: {
@@ -37280,14 +37283,20 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
-              _c("div", [_vm._v(_vm._s(event.id))]),
+              _c("div", { staticClass: "icon fl" }, [
+                _c("img", { attrs: { src: event.thumb_url } })
+              ]),
               _vm._v(" "),
-              _c("div", [_vm._v(_vm._s(event.title))]),
-              _vm._v(" "),
-              _c("div", [_c("img", { attrs: { src: event.thumb_url } })]),
-              _vm._v(
-                "\n                    I'm an example component.\n                "
-              )
+              _c("div", { staticClass: "fl", staticStyle: { margin: "2px" } }, [
+                _c("div", [_vm._v(_vm._s(event.id))]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(event.title))]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(event.st_date))]),
+                _vm._v(
+                  "\n                        I'm an example component.\n                    "
+                )
+              ])
             ])
           ])
         }),

@@ -5,11 +5,20 @@
 </div>
 </div>
 <div class='container'>
-<example-component :event-data="{{ $event_data }}"></example-component>
-    <!-- @foreach ($event_data as $event)
+<div>
+    <form class="formsearch" method="GET" action="/">
+        <input type="search" name="search" class="formsearch-input" placeholder="search" value={{$search}} >
+        <button type="submit" class="formsearch-button"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+<div>
+    <example-component :event-data="{{ $event_data }}"></example-component>
+</div>
+    {{-- @foreach ($event_data as $event)
         {{$event->summary}}
         <example-component :event-data="{{ $event }}"></example-component>
-    @endforeach -->
+    @endforeach
+    --}}
 </div>
 
 @endsection

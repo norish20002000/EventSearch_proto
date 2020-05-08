@@ -5,12 +5,15 @@
                 <div class="card" v-for="event in events" :key="event.id">
                     <div class="card-header">{{event.summary}}</div>
                     <div class="card-body">
-                        <div>{{event.id}}</div>
-                        <div>{{event.title}}</div>
-                        <div>
+                        <div class="icon fl">
                             <img :src="event.thumb_url"/>
                         </div>
-                        I'm an example component.
+                        <div class="fl" style="margin: 2px">
+                            <div>{{event.id}}</div>
+                            <div>{{event.title}}</div>
+                            <div>{{event.st_date}}</div>
+                            I'm an example component.
+                        </div>
                     </div>
                 </div>
             </div>
