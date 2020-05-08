@@ -23,3 +23,7 @@ Route::get('/', 'WelcomeController@index');
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mail', 'TestMailController@send');
+
+Route::get('todayevent', 'WelcomeController@searchToday')->name('todayevent');
+Route::get('tomorrowevent', 'WelcomeController@searchTomorrow')->name('tomorrowevent');
+Route::get('weekendevent', 'WelcomeController@searchWeekend')->name('weekendevent');

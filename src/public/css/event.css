@@ -35,3 +35,15 @@
     border: solid 1px #ccc;
     opacity: 0.54;
 }
+
+.p-btn {
+    color: #fff;
+    background-color: #444;
+    border-color: #444;
+    border-radius: 10px;
+    width: 20%;
+    display: inline-block;
+    margin: 0 0 0 8px;
+    padding: 10px 10px 10px 0;
+    text-align: center;
+}

@@ -1861,6 +1861,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ExampleComponent",
   props: {
@@ -37293,6 +37294,8 @@ var render = function() {
                 _c("div", [_vm._v(_vm._s(event.title))]),
                 _vm._v(" "),
                 _c("div", [_vm._v(_vm._s(event.st_date))]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(event.end_date))]),
                 _vm._v(
                   "\n                        I'm an example component.\n                    "
                 )

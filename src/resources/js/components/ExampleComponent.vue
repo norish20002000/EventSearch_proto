@@ -12,6 +12,7 @@
                             <div>{{event.id}}</div>
                             <div>{{event.title}}</div>
                             <div>{{event.st_date}}</div>
+                            <div>{{event.end_date}}</div>
                             I'm an example component.
                         </div>
                     </div>

@@ -21,6 +21,55 @@ class WelcomeController extends Controller
     }
 
     /**
+     * today event
+     * @param Request $request
+     */
+    public function searchToday(Request $request)
+    {
+        $today = date("Y-m-d");
+        $data['event_data'] = Event::getEventByDate($request, $today);
+
+        return view("welcome", $data);
+    }
+
+    /**
+     * tomorrow event
+     * @param Request $request
+     */
+    public function searchTomorrow(Request $request)
+    {
+        $tomorrow = date("Y-m-d", strtotime('+1 day'));
+        $data['event_data'] = Event::getEventByDate($request, $tomorrow);
+
+        return view("welcome", $data);
+    }
+
+    /**
+     * weekend event
+     */
+    public function searchWeekend(Request $request)
+    {
+        $today = date("Y-m-d");
+        $tomorrow = date("Y-m-d", strtotime('+1 day'));
+        $nextSaturday = date("Y-m-d", strtotime('next Saturday'));
+        $nextSunday = date("Y-m-d", strtotime('next Sunday'));
+
+        // weekdat or suturday or sunday
+        if (1 <= date('w') && date('w') <= 5) {
+
+        } elseif (date('w') === 6) {
+
+        } elseif (date('w') === 0) {
+            $data['event_data'] = Event::getEventByDate($request, $today);
+        }
+
+        $data['event_data'] = Event::getEventData($request);
+
+
+        return view("welcome", $data);
+    }
+
+    /**
      * Handle the incoming request.
      *
      * @param  \Illuminate\Http\Request  $request

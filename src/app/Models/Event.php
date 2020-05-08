@@ -15,7 +15,7 @@ class Event extends Model
     }
 
     /**
-     * status=0イベントデータ取得
+     * イベントデータ取得
      * @param request
      * @return eventData
      */
@@ -39,4 +39,31 @@ class Event extends Model
         return $eventData;
     }
 
+    /**
+     * event by date
+     * @param Request $request
+     * @param Date $day
+     */
+    public static function getEventByDate($request, $day)
+    {
+        $eventData = DB::table('events')
+                        ->where([
+                            ['st_date', '<=', $day],
+                            ['end_date', '>=', $day]
+                        ])->get();
+        
+        return $eventData;
+    }
+
+    /**
+     * event by between days
+     * @param Request $request
+     * @param Date $s_date
+     * @param Date $e_date
+     */
+    public static function getEventByDays($request, $s_day, $e_day) {
+        $eventData = "";
+
+        return $eventData;
+    }
 }
