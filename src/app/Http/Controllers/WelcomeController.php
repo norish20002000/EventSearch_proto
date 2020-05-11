@@ -56,15 +56,12 @@ class WelcomeController extends Controller
 
         // weekdat or suturday or sunday
         if (1 <= date('w') && date('w') <= 5) {
-
+            $data['event_data'] = Event::getEventByDays($request, $nextSaturday, $nextSunday);
         } elseif (date('w') === 6) {
-
+            $data['event_data'] = Event::getEventByDays($request, $today, $tomorrow);
         } elseif (date('w') === 0) {
             $data['event_data'] = Event::getEventByDate($request, $today);
         }
-
-        $data['event_data'] = Event::getEventData($request);
-
 
         return view("welcome", $data);
     }

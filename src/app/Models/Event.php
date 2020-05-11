@@ -64,6 +64,17 @@ class Event extends Model
     public static function getEventByDays($request, $s_day, $e_day) {
         $eventData = "";
 
+        $eventData = DB::table('events')
+                        ->where([
+                            ['st_date', '<=', $s_day],
+                            ['end_date', '>=', $s_day]
+                        ])
+                        ->orwhere([
+                            ['st_date', '<=', $e_day],
+                            ['end_date', '>=', $e_day]
+                        ])
+                        ->get();
+
         return $eventData;
     }
 }
